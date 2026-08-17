@@ -28,4 +28,18 @@ struct
 
 WNDW    wnd;
 
+/**
+  @fn               void Draw(void)
+  @brief            draw the scene
+*/
+void Draw(void);
+
+/**
+  @fn               BOOL Graphics(const BOOL load)
+  @brief            load or destroy the graphics
+  @param[in]        load if TRUE, loads the graphics; if FALSE, destroys them
+  @return           TRUE if loading/destruction was successful; FALSE otherwise
+*/
+BOOL Graphics(const BOOL load);
+
 #endif

@@ -56,7 +56,7 @@ static void Defaults(void)
 /* perform game algorithm */
 static void Run(void)
 {
-    // TODO Draw();
+    Draw();
     // TODO Input();
     // TODO Update();
     // TODO Benchmark(&bench);
@@ -105,7 +105,7 @@ static BOOL Start(void)
         }
 
         // set up graphics, audio, and bluetooth
-        // TODO if(Graphics(TRUE))
+        if(Graphics(TRUE))
         {
             // TODO Logic();
             success = TRUE;
