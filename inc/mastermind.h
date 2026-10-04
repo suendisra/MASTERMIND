@@ -8,6 +8,9 @@
 #include <util-std.h>
 #include <win-std.h>
 
+#define BOARD_COLS      4
+#define BOARD_ROWS      12
+
 // bring in appropriate version of library
 #ifndef _DEBUG
 #pragma comment(lib, "UTIL.lib")
@@ -21,9 +24,18 @@
 #pragma comment(lib, "OGLD.lib")
 #endif
 
+enum PLAYER
+{
+    PLAYER_1ST,
+    PLAYER_2ND,
+    PLAYER_EMPTY,
+    PLAYER_LAST
+};
+
 struct
 {
-    BOOL    over;
+    enum PLAYER     board[BOARD_ROWS][BOARD_COLS];
+    BOOL            over;
 }app;
 
 WNDW    wnd;
